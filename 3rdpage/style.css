@@ -1697,3 +1697,92 @@
     box-shadow: none;
     transform: translateY(0);
   }
+  /* General Slide container */
+.swiper-container {
+  width: 100%;
+  height: 100vh; /* Ensure it takes full viewport height */
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+}
+
+/* Individual Slides */
+.swiper-slide {
+  text-align: center;
+  font-size: 2vw; /* Make text responsive to screen size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden; /* To hide any overflowing text */
+}
+
+/* Title */
+.swiper-slide h1 {
+  font-size: 4vw; /* Responsive Title size */
+  margin-bottom: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Paragraph Text */
+.swiper-slide p {
+  font-size: 1.5vw; /* Responsive Paragraph size */
+  margin: 0 auto;
+  max-width: 80%; /* Ensure the text block has a limited width */
+  color: rgba(255, 255, 255, 0.9); /* Lighter color for better readability */
+}
+
+/* Button */
+.swiper-slide a {
+  display: inline-block;
+  font-size: 1.8vw; /* Responsive Button text size */
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Button Hover */
+.swiper-slide a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Ensure responsiveness for smaller devices */
+@media (max-width: 768px) {
+  .swiper-slide h1 {
+    font-size: 6vw; /* Bigger title for smaller screens */
+  }
+  
+  .swiper-slide p {
+    font-size: 3vw; /* Bigger paragraph text for smaller screens */
+  }
+
+  .swiper-slide a {
+    font-size: 3.5vw; /* Bigger button text for smaller screens */
+  }
+}
+
+/* Ensure responsiveness for very small devices */
+@media (max-width: 480px) {
+  .swiper-slide h1 {
+    font-size: 8vw;
+  }
+
+  .swiper-slide p {
+    font-size: 4vw;
+  }
+
+  .swiper-slide a {
+    font-size: 4.5vw;
+  }
+}
